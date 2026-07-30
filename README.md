@@ -11,6 +11,13 @@ A minimal binary watch face for Xiaomi Smart Band 10.
   <sub>212 × 520 px display · 46.57 × 22.54 mm band body</sub>
 </p>
 
+<p align="center">
+  <a href="https://buymeacoffee.com/jadegopher">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+       alt="Buy Me a Coffee" width="200">
+  </a>
+</p>
+
 ## Reading the time
 
 The four columns represent the digits of 24-hour time (`HHMM`). Read each
