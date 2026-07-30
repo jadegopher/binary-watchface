@@ -11,13 +11,6 @@ A minimal binary watch face for Xiaomi Smart Band 10.
   <sub>212 × 520 px display · 46.57 × 22.54 mm band body</sub>
 </p>
 
-<p align="center">
-  <a href="https://buymeacoffee.com/jadegopher">
-    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-       alt="Buy Me a Coffee" width="200">
-  </a>
-</p>
-
 ## Reading the time
 
 The four columns represent the digits of 24-hour time (`HHMM`). Read each
@@ -27,54 +20,44 @@ column from top to bottom using the values `8`, `4`, `2`, and `1`:
 - Empty circle: `0`
 
 Add the filled values in each column to get its digit. The colon separates
-hours from minutes.
-
-The face also shows the current temperature, date, weekday, and battery level.
-The battery capsule has six states from empty to full. Weather is left blank
-when the band has no valid temperature data.
+hours from minutes. The face also shows temperature, date, weekday, and
+battery level.
 
 ## Install
 
-### Download a release
-
-1. Download the latest `.face` file from the project's Releases page.
+1. Download the latest `wf_pack.bin`.
 2. Connect the Xiaomi Smart Band 10 to an Android phone.
-3. Install a compatible third-party app, such as **[Notify for Xiaomi](https://play.google.com/store/apps/details?id=com.mc.xiaomi1&hl=en)**.
-4. Open the app and go to **Watchfaces**.
-5. Select **Install private watchface**.
-6. Choose the downloaded `.face` file and install it.
+3. Install a compatible third-party app such as
+   [Notify for Xiaomi](https://play.google.com/store/apps/details?id=com.mc.xiaomi1&hl=en).
+4. Open **Watchfaces** and select **Install private watchface**.
+5. Choose `wf_pack.bin` and install it.
 
-Third-party installation is unofficial. App menus and compatibility may change
-between versions.
+Third-party installation is unofficial. App menus and compatibility may
+change between versions.
 
-### Build with Mi Create
+## Build
 
-1. Install Xiaomi **[Mi Create](https://github.com/ooflet/Mi-Create)**.
-2. Open `binary.fprj`.
-3. Build or export the project for Xiaomi Smart Band 10.
-4. Find the generated `.face` file in the output folder.
-5. Install it using the Android steps above.
+Python and Pillow are required. Generate the JSON definition and all normal
+and AOD resources, then run the GMF packer:
 
-## Regenerate assets
-
-Python and Pillow are required:
-
-```sh
+```powershell
 python generate_assets.py
+.\WatchfacePackTool64.exe
 ```
 
-This regenerates the normal assets, AOD assets, and preview images. The
-watch face uses Lato Black for its text; `Lato-Black.ttf` must remain beside
-the generator.
+The watch face uses Lato Black; `Lato-Black.ttf` must remain beside the
+generator. Every visual component is rendered at 4× resolution and
+downsampled for smoother edges.
 
 ## Project notes
 
 - Display: `212 × 520`
-- Mi Create device ID: `466`
-- Main project: `binary.fprj`
-- AOD project: `AOD/AOD.fprj`
-- Compiled output: `output/binary.face`
+- Device: Xiaomi Smart Band 10
+- Definition: `wfDef.json`
+- Normal resources: `images`
+- AOD resources: `images_aod`
+- Compiled output: `wf_pack.bin`
 
-`DeviceType="466"` is Mi Create's compiler identifier, not the display width.
-The generated `preview_default.png` files work around missing Smart Band 10
-preview-size metadata in Mi Create 1.1.1.
+Temperature uses GMF's signed numeric widget with live source `2031`.
+Unavailable-weather presentation is controlled by the Band firmware and the
+phone's supplied weather state.

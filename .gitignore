@@ -1,3 +1,9 @@
 output/
 __pycache__/
 /cmd
+/images/
+/images_aod/
+*.bin
+/pack.log
+*.exe
+*.bim
