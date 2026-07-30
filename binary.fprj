@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<FaceProject DeviceType="466" Id="">
+	<Screen Title="Binary" Bitmap="preview.png" Width="212" Height="520">
+		<Widget Shape="30" Name="background" X="0" Y="0" Width="212" Height="520" Alpha="255" Visible_Src="0" Bitmap="background.png"/>
+		<Widget Shape="32" Name="weather_temperature" X="72" Y="54" Width="36" Height="30" Alpha="255" Digits="2" Alignment="1" Spacing="0" Blanking="1" Visible_Src="4" Value_Src="2031" BitmapList="date-0.png|date-1.png|date-2.png|date-3.png|date-4.png|date-5.png|date-6.png|date-7.png|date-8.png|date-9.png|weather-minus.png"/>
+		<Widget Shape="30" Name="weather_unit" X="108" Y="54" Width="32" Height="30" Alpha="255" Visible_Src="4" Bitmap="weather-unit.png"/>
+		<Widget Shape="32" Name="month" X="32" Y="404" Width="36" Height="30" Alpha="255" Digits="2" Alignment="1" Spacing="0" Blanking="0" Visible_Src="0" Value_Src="1012" BitmapList="date-0.png|date-1.png|date-2.png|date-3.png|date-4.png|date-5.png|date-6.png|date-7.png|date-8.png|date-9.png|date-0.png"/>
+		<Widget Shape="32" Name="weekday" X="74" Y="404" Width="64" Height="30" Alpha="255" Digits="1" Alignment="1" Spacing="0" Blanking="0" Visible_Src="0" Value_Src="2012" BitmapList="weekday-sun.png|weekday-mon.png|weekday-tue.png|weekday-wed.png|weekday-thu.png|weekday-fri.png|weekday-sat.png|weekday-sun.png|weekday-sun.png|weekday-sun.png|weekday-sun.png"/>
+		<Widget Shape="32" Name="date" X="144" Y="404" Width="36" Height="30" Alpha="255" Digits="2" Alignment="1" Spacing="0" Blanking="0" Visible_Src="0" Value_Src="1812" BitmapList="date-0.png|date-1.png|date-2.png|date-3.png|date-4.png|date-5.png|date-6.png|date-7.png|date-8.png|date-9.png|date-0.png"/>
+		<Widget Shape="32" Name="hours_binary" X="2" Y="108" Width="92" Height="260" Alpha="255" Digits="2" Alignment="0" Spacing="0" Blanking="0" Visible_Src="0" Value_Src="811" BitmapList="digit-0.png|digit-1.png|digit-2.png|digit-3.png|digit-4.png|digit-5.png|digit-6.png|digit-7.png|digit-8.png|digit-9.png|digit-0.png"/>
+		<Widget Shape="32" Name="minutes_binary" X="116" Y="108" Width="92" Height="260" Alpha="255" Digits="2" Alignment="0" Spacing="0" Blanking="0" Visible_Src="0" Value_Src="1011" BitmapList="digit-0.png|digit-1.png|digit-2.png|digit-3.png|digit-4.png|digit-5.png|digit-6.png|digit-7.png|digit-8.png|digit-9.png|digit-0.png"/>
+		<Widget Shape="30" Name="time_colon" X="101" Y="202" Width="10" Height="70" Alpha="255" Visible_Src="0" Bitmap="colon.png"/>
+		<Widget Shape="30" Name="battery_indicator" X="50" Y="462" Width="112" Height="30" Alpha="255" Visible_Src="0" Bitmap="battery-state-4.png"/>
+	</Screen>
+</FaceProject>
